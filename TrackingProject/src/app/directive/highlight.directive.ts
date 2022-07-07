@@ -1,13 +1,17 @@
-import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, Renderer2 } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Directive({
-  selector: '[appHighlight]'
+  selector: '[Highlight]'
 })
 export class HighlightDirective {
-
-  constructor(private element:ElementRef,private renderder:Renderer2) { }
-  @HostListener("click") highlighting(){
-      this.renderder.addClass(this.element.nativeElement,"highLightBox")
+  
+  constructor(private data:DataService,private element:ElementRef,private renderder:Renderer2) { }
+  @Input("Highlight")set value(object:{x:number,y:number}){
+    if(this.data.Xvalue===object.x&&this.data.Yvalue===object.y){
+      this.renderder.setStyle(this.element.nativeElement,'backgroundcolor','black')
+    }else{
+      this.renderder.setStyle(this.element.nativeElement,'backgroundcolor','transparent')
+    }
   }
-
 }
