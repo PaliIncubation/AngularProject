@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-dialog',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class DialogComponent implements OnInit {
 positionX:any="";
 positionY:any="";
-  constructor() { }
+  constructor(public data:DataService) { }
 
   ngOnInit(): void {
   }
