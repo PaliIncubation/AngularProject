@@ -1,1 +1,4 @@
+<div class="clickBox" (dblclick)="createDivEle($event)">
+    <div><a class="smallBox" [ngStyle]="{'left':data.x,'top':data.y}" *ngFor="let data of data; index as i" (dblclick)="$event.stopPropagation();" [routerLink]="['/position',data.x,data.y]" (keydown.delete)="removeDiv(i)"></a></div>
+</div>
 
