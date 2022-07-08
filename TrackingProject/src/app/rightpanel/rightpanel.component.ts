@@ -8,11 +8,11 @@ import { DataService } from '../services/data.service';
 })
 export class RightpanelComponent implements OnInit {
 
-  constructor(public x:DataService ) { }
+  constructor(public Data:DataService ) { }
 
   ngOnInit(): void {
   }
   removeElement(i:any){
-    this.x.deleteDiv(i);
+    this.Data.deleteDiv(i);
   }
 }

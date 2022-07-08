@@ -1,5 +1,5 @@
 <div class="right-panel-structure">
-        <div appHighlight *ngFor="let rightPanelElement of x.data;let i=index" tabindex="0" class="xy-coords-align"
+        <div appHighlight *ngFor="let rightPanelElement of Data.data;let i=index" tabindex="0" class="xy-coords-align"
             (keydown.delete)="removeElement(i)"><div>{{rightPanelElement | coords}}</div><button (click)="removeElement(i)">delete</button>
         </div>
 </div>
