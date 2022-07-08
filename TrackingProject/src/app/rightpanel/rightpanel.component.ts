@@ -12,7 +12,7 @@ export class RightpanelComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // removeElement(i:any){
-  //   this.Element.deleteDiv(i);
-  // }
+  removeElement(i:any){
+    this.Element.deleteDiv(i);
+  }
 }
