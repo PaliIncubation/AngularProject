@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
-  data:{x:number,y:number}[]=[]
+  data:{x:number,y:number}[]=[    
+  ]
   Xvalue!:number
   Yvalue!:number
   constructor() { }
