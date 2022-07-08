@@ -9,12 +9,14 @@ import { DataService } from '../services/data.service';
 export class DialogComponent implements OnInit {
 positionX:any="";
 positionY:any="";
-  constructor(public data:DataService) { }
+  constructor(public dataVal:DataService) { }
 
   ngOnInit(): void {
   }
   getValue(e:any){
-    console.log(this.positionX,this.positionY);
+    if(this.positionX !== "" && this.positionY !=="" ){
+      this.dataVal.addNewDiv(this.positionX,this.positionY);
+  }
   }
 
 }
