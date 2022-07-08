@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 /* You can add global styles to this file, and also import other style files */
 *{
     margin: 0;
 }
-=======
 *{
     box-sizing: border-box;
     padding: 0;
@@ -15,4 +13,3 @@ html{
 body{
     font-size: 1.6rem;
 }
->>>>>>> main
